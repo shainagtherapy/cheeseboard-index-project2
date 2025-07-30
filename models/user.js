@@ -62,10 +62,16 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  userType: {
+    type: String,
+    required: true,
+    enum: ['manager, monger']
+  },
   password: {
     type: String,
     required: true,
   },
+ 
   boardMenu: [menuSchema],
 });
 
