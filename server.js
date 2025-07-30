@@ -15,6 +15,8 @@ const menuController = require('./controllers/menu.js');
 
 const port = process.env.PORT ? process.env.PORT : '3000';
 
+const { rawListeners } = require("./models/user.js");
+
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {

@@ -10,7 +10,7 @@
     <h1>Add a New Board</h1>
     <p>This is our Schema list to build a new board!</p>
 
-    <form action="" method="">
+    <form action="/users/<%= user._id %>/menu" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
 
@@ -68,7 +68,7 @@
         <label for="notes">Notes:</label>
         <textarea name="notes" id="notes"></textarea>
 
-        <button type="submit">Add New Board</button>
+        <button type="submit">Submit</button>
 
     </form>
 </body>

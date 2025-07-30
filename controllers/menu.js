@@ -9,6 +9,17 @@ module.exports = router;
 
 //===========================CREATE======================================================
 
+router.post('/', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.ression.user._id);
+        currentUser.menu.push(req.body);
+        await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/menu`);
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
 
 
 //===========================READ======================================================
