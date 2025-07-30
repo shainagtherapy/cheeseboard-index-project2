@@ -1,0 +1,9 @@
+<nav>
+  <% if(user) { %>
+    <a href="/users/<%= user._id %>/menu">Menu</a>
+    <a href="/auth/sign-out">Sign Out</a>
+  <% } else { %>
+    <a href="/auth/sign-up">New Staff</a>
+    <a href="/auth/sign-in">Sign In</a>
+  <% } %>
+</nav>
