@@ -23,7 +23,7 @@ const menuSchema = mongoose.Schema({
   },
   accout: {
     type: String,
-    required: true,
+
   },
   jam: {
     type: String,
@@ -35,7 +35,7 @@ const menuSchema = mongoose.Schema({
     required: true,
     enum: ['dark chocolate, milk chocolate, vegan semi-sweet']
   },
-  nut: {
+  nuts: {
     type: String,
     required: true,
     enum: ['pistachios, marcona almonds, candied pecans']
@@ -43,16 +43,16 @@ const menuSchema = mongoose.Schema({
   carbs: {
     type: String,
     required: true,
-    enum: ['baguette, pretzel crackers, sourdough crackers, gluten-free crackers'],
+    enum: ['baguette, pretzel crackers, rosemary crackers, sourdough crackers, gluten-free crackers'],
   },
   floralGarnishes: {
     type: String,
     required: true,
   },
-  RecommendedWinePairings: {
+  winePairings: {
     type: String,
   },
-  Notes: {
+  notes: {
     type: String,
   }
 })

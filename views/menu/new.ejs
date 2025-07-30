@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Cheeseboard</title>
 </head>
 <body>
-    
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a New Board</h1>
+    <p>This is our Schema list to build a new board!</p>
+
+    <form action="" method="">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="cheeses">Cheeses:</label>
+        <input type="text" name="cheeses" id="cheeses" />
+
+        <label for="meats">Meats:</label>
+        <input type="text" name="meats" id="meats" />
+
+        <label for="veggie">Veggie:</label>
+        <input type="text" name="veggie" id="veggie" />
+
+        <label for="fruit">Fruit:</label>
+        <input type="text" name="fruit" id="fruit" />
+
+        <label for="accout">Accoutrements:</label>
+        <input type="text" name="accout" id="accout" />
+
+        <label for="jam">Jam:</label>
+        <select id="jam" name="jam">
+            <option value="fig">Fig</option>
+            <option value="apricot">Apricot</option>
+            <option value="cherry">Cherry</option>
+        </select>
+
+        <label for="chocolate">Chocolate:</label>
+        <select id="chocolate" name="chocolate">
+            <option value="dark chocolate">Dark chocolate</option>
+            <option value="milk chocolate">Milk chocolate</option>
+            <option value="vegan semi-sweet">Vegan semi-sweet</option>
+        </select>
+
+        <label for="nuts">Nuts:</label>
+        <select id="nuts" name="nuts">
+            <option value="pistachios">Pistachios</option>
+            <option value="marcona almonds">Marcona almonds</option>
+            <option value="candied pecans">Candied pecans</option>
+        </select>
+
+        <label for="carbs">Carb base:</label>
+        <select id="carbs" name="carbs">
+            <option value="baguette">Baguette</option>
+            <option value="pretzel crackers">Pretzel crackers</option>
+            <option value="rosemary crackers">Rosemary crackers</option>
+            <option value="sourdough crackers">Sourdough crackers</option>
+            <option value="gluten-free crackers">Gluten-free crackers</option>
+        </select>
+
+        <label for="floralGarnishes">Floral Garnishes:</label>
+        <input type="text" name="floralGarnishes" id="floralGarnishes" />
+
+        <label for="winePairings">Recommended Wine Pairing:</label>
+        <input type="text" name="winePairings" id="winePairings" />
+
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"></textarea>
+
+        <button type="submit">Add New Board</button>
+
+    </form>
 </body>
 </html>
