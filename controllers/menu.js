@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
         currentUser.menuIndex.push(req.body);
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/menu`);
-        
+
     } catch (error) {
         console.log(error);
         res.redirect('/');
@@ -25,8 +25,16 @@ router.post('/', async (req, res) => {
 
 //===========================READ======================================================
 
-router.get('/', (req, res) => {
-    res.render('menu/index.ejs');
+router.get('/', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        res.render('menu/index.ejs', {
+            boardIndex: currentUser.menuIndex,
+        })
+    } catch (error) {
+        console.log(error)
+        res.render('/');
+    }
 });
 
 router.get('/new', async (req, res) => {
