@@ -28,22 +28,22 @@ const menuSchema = new mongoose.Schema({
   jam: {
     type: String,
     required: true,
-    enum: ['fig, apricot, cherry'],
+    enum: ['fig', 'apricot', 'cherry'],
   },
   chocolate: {
     type: String,
     required: true,
-    enum: ['dark chocolate, milk chocolate, vegan semi-sweet']
+    enum: ['dark chocolate', 'milk chocolate', 'vegan semi-sweet']
   },
   nuts: {
     type: String,
     required: true,
-    enum: ['pistachios, marcona almonds, candied pecans']
+    enum: ['pistachios', 'marcona almonds', 'candied pecans']
   },
   carbs: {
     type: String,
     required: true,
-    enum: ['baguette, pretzel crackers, rosemary crackers, sourdough crackers, gluten-free crackers'],
+    enum: ['baguette', 'pretzel crackers', 'rosemary crackers', 'sourdough crackers', 'gluten-free crackers'],
   },
   floralGarnishes: {
     type: String,
@@ -57,7 +57,7 @@ const menuSchema = new mongoose.Schema({
   }
 })
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
@@ -66,7 +66,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  boardMenu: [menuSchema],
+  menuIndex: [menuSchema],
 });
 
 const User = mongoose.model('User', userSchema);
