@@ -11,7 +11,7 @@
     <a href="/users/<%=user._id%>/menu/new">Add New Board</a>
     <p>This is where we will list the cheeseboards by name and link them to their detailed show page!</p>
     <ul>
-        <% boardIndex.forEach(cheeseboard => { %>
+        <% boardList.forEach(cheeseboard => { %>
             <li>
                 <a href="/users/<%= user._id %>/menu/<%= cheeseboard._id%>">
                 <%= cheeseboard.name %>

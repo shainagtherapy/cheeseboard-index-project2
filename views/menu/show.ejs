@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= boardDetails.name %></h1>
+
+    <p>Cheeses: <%= boardDetails.cheeses %></p>
+    <p>Meats: <%= boardDetails.meats %></p>
+    <p>Veggies: <%= boardDetails.veggie %></p>
+    <p>Fruit: <%= boardDetails.fruit %></p>
+    <p>Accoutrements: <%= boardDetails.accout %></p>
+    <p>Jam: <%= boardDetails.jam %></p>
+    <p>Chocolate: <%= boardDetails.chocolate %></p>
+    <p>Nuts: <%= boardDetails.nuts %></p>
+    <p>Carb Base: <%= boardDetails.carbs %></p>
+
+    <% if (boardDetails.floralGarnishes) { %>
+    <p>Floral Garnishes: <%= boardDetails.floralGarnishes %></p>
+    <% } %>
+    <% if (boardDetails.winePairings) { %>
+    <p>Recommended Wine Pairings: <%= boardDetails.winePairings %></p>
+    <% } %>
+    <% if (boardDetails.notes) { %>
+    <p>Notes: <%= boardDetails.notes %></p>
+    <% } %>
+
+</body>
+</html>

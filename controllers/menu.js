@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
         res.render('menu/index.ejs', {
-            boardIndex: currentUser.menuIndex,
+            boardList: currentUser.menuIndex,
         })
     } catch (error) {
         console.log(error)
@@ -40,6 +40,19 @@ router.get('/', async (req, res) => {
 router.get('/new', async (req, res) => {
     res.render('menu/new.ejs')
 });
+
+router.get('/:menuId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        const boardDetails= currentUser.menuIndex.id(req.params.menuId);
+        res.render('menu/show.ejs', {
+            boardDetails: boardDetails,
+        })
+    } catch (errors) {
+        console.log(error);
+        res.redirect('/')
+    }
+})
 
 
 //===========================UPDATE======================================================
