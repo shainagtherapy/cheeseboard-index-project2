@@ -48,15 +48,41 @@ router.get('/:menuId', async (req, res) => {
         res.render('menu/show.ejs', {
             boardDetails: boardDetails,
         })
-    } catch (errors) {
+    } catch (error) {
         console.log(error);
         res.redirect('/')
     }
-})
+});
+
+router.get('/:menuId/edit', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        const boardDetails = currentUser.menuIndex.id(req.params.menuId)
+        res.render('menu/edit.ejs', {
+            boardDetails: boardDetails,
+        })
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
 
 
 //===========================UPDATE======================================================
 
+router.put('/:menuId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        const boardDetails = currentUser.menuIndex.id(req.params.menuId)
+
+        boardDetails.set(req.body);
+        await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/menu/${req.params.menuId}`)
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
 
 
 //===========================DELETE======================================================

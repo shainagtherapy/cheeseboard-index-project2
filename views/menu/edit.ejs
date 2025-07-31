@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing <%= boardDetails.title %></title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit <%= boardDetails.title %></h1>
+    <p>This is our EDIT/ DELETE</p>
+
+    <form action="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= boardDetails.name"%>/>
+
+        <label for="cheeses">Cheeses:</label>
+        <input type="text" name="cheeses" id="cheeses" value="<%= boardDetails.cheeses %>"/>
+
+        <label for="meats">Meats:</label>
+        <input type="text" name="meats" id="meats" value="<%= boardDetails.meats"%>/>
+
+        <label for="veggie">Veggie:</label>
+        <input type="text" name="veggie" id="veggie" value="<%= boardDetails.veggie"%>/>
+
+        <label for="fruit">Fruit:</label>
+        <input type="text" name="fruit" id="fruit" value="<%= boardDetails.fruit"%>/>
+
+        <label for="accout">Accoutrements:</label>
+        <input type="text" name="accout" id="accout" value="<%= boardDetails.accout"%>/>
+
+        <label for="jam">Jam:</label>
+        <select id="jam" name="jam">
+            <option value="fig" <%= boardDetails.jam === "fig" ? "selected" : "" %> >Fig</option>
+            <option value="apricot" <%= boardDetails.jam === "apricot" ? "selected" : "" %> >Apricot</option>
+            <option value="cherry" <%= boardDetails.jam === "cherry" ? "selected" : "" %> >Cherry</option>
+        </select>
+
+        <label for="chocolate">Chocolate:</label>
+        <select id="chocolate" name="chocolate">
+            <option value="dark chocolate" <%= boardDetails.chocolate === "dark chocolate" ? "selected" : "" %> >Dark chocolate</option>
+            <option value="milk chocolate" <%= boardDetails.chocolate === "milk chocolate" ? "selected" : "" %> >Milk chocolate</option>
+            <option value="vegan semi-sweet" <%= boardDetails.chocolate === "vegan semi-sweet" ? "selected" : "" %> >Vegan semi-sweet</option>
+        </select>
+
+        <label for="nuts">Nuts:</label>
+        <select id="nuts" name="nuts">
+            <option value="pistachios" <% boardDetails.nuts === "pistachios" ? "selected" : ""%> >Pistachios</option>
+            <option value="marcona almonds" <%= boardDetails.nuts === "marcona almonds" ? "selected" : "" %> >Marcona almonds</option>
+            <option value="candied pecans" <%= boardDetails.nuts === "candied pecans" ? "selected" : "" %> >Candied pecans</option>
+        </select>
+
+        <label for="carbs">Carb base:</label>
+        <select id="carbs" name="carbs">
+            <option value="baguette" <%= boardDetails.carbs === "baguette" ? "selected" : "" %> >Baguette</option>
+            <option value="pretzel crackers" <%= boardDetails.carbs === "pretzel crackers" ? "selected" : "" %> >Pretzel crackers</option>
+            <option value="rosemary crackers" <%= boardDetails.carbs === "rosemary crackers" ? "selected" : "" %> >Rosemary crackers</option>
+            <option value="sourdough crackers" <%= boardDetails.carbs === "sourdough crackers" ? "selected" : "" %> >Sourdough crackers</option>
+            <option value="gluten-free crackers" <%= boardDetails.carbs === "gluten-free crackers" ? "selected" : "" %>>Gluten-free crackers</option>
+        </select>
+
+        <label for="floralGarnishes">Floral Garnishes:</label>
+        <input type="text" name="floralGarnishes" id="floralGarnishes" value="<%= boardDetails.floralGarnishes %>"/>
+
+        <label for="winePairings">Recommended Wine Pairing:</label>
+        <input type="text" name="winePairings" id="winePairings" value="<%= boardDetails.winePairings %>"/>
+
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"> <%= boardDetails.notes %></textarea>
+
+        <button type="submit">Update Board</button>
+        <form action ="/users/<%= user._id %>/menu/<% boardDetails._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete this board</button>
+        </form>
+
+    </form>
+</body>
+</html>

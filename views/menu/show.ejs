@@ -29,8 +29,7 @@
         <p>Notes: <%= boardDetails.notes %></p>
         <% } %>
 
-        <form action ="/users/<%= user._id %>/menu/<% boardDetails._id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete this board</button>
-        </form>
+        <a href="/users/<%= user._id %>/menu/<%= boardDetails._id %>/edit">Edit Board</a>
+
     </body>
 </html>
