@@ -7,27 +7,28 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
+    
     <h1>Edit <%= boardDetails.title %></h1>
     <p>This is our EDIT/ DELETE</p>
 
     <form action="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=PUT" method="POST">
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name" value="<%= boardDetails.name"%>/>
+        <input type="text" name="name" id="name" value="<%= boardDetails.name%>"/>
 
         <label for="cheeses">Cheeses:</label>
         <input type="text" name="cheeses" id="cheeses" value="<%= boardDetails.cheeses %>"/>
 
         <label for="meats">Meats:</label>
-        <input type="text" name="meats" id="meats" value="<%= boardDetails.meats"%>/>
+        <input type="text" name="meats" id="meats" value="<%= boardDetails.meats%>"/>
 
         <label for="veggie">Veggie:</label>
-        <input type="text" name="veggie" id="veggie" value="<%= boardDetails.veggie"%>/>
+        <input type="text" name="veggie" id="veggie" value="<%= boardDetails.veggie%>"/>
 
         <label for="fruit">Fruit:</label>
-        <input type="text" name="fruit" id="fruit" value="<%= boardDetails.fruit"%>/>
+        <input type="text" name="fruit" id="fruit" value="<%= boardDetails.fruit%>"/>
 
         <label for="accout">Accoutrements:</label>
-        <input type="text" name="accout" id="accout" value="<%= boardDetails.accout"%>/>
+        <input type="text" name="accout" id="accout" value="<%= boardDetails.accout%>"/>
 
         <label for="jam">Jam:</label>
         <select id="jam" name="jam">
