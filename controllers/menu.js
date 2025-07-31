@@ -60,3 +60,15 @@ router.get('/:menuId', async (req, res) => {
 
 
 //===========================DELETE======================================================
+
+router.delete('/:menuId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id)
+        currentUser.menuIndex.id(req.params.applicationId).deleteOne();
+        await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/menu`)
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+})
