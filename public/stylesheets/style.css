@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Rye&family=Xanh+Mono:ital@0;1&display=swap&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Sedgwick+Ave&family=Smooch+Sans:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Comforter+Brush&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Michroma&family=Orbitron:wght@700&family=Rye&family=Sedgwick+Ave&family=Smooch+Sans:wght@700&family=Special+Elite&family=Xanh+Mono:ital@0;1&display=swap');
 body {
-    font-family: 'Courier Prime', sans-serif;
+    font-family: 'Special Elite', sans-serif;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -9,8 +8,8 @@ body {
     background-color: white;
 }
 
-/* public/stylesheets/style.css */
 
+/* HOMEPAGE */
 .index-body {
   background-image: url('https://plus.unsplash.com/premium_photo-1687959301516-3f1c5ab4e726?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-repeat: no-repeat;
@@ -39,7 +38,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  align-content:
   height: 100%;
 }
 
@@ -80,4 +78,82 @@ body {
 
 .signin-link:hover {
   background-color: #ffffff;
+}
+
+
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  max-width: 100vw;
+  padding: 10px 10px;
+  gap: 10px;
+  justify-items: left;
+  
+}
+
+#nav-header {
+  color: #ce4866;
+  size: 1em !important;
+  margin: 0;
+}
+
+.authlink {
+  text-decoration: none;
+  margin: 10 15px;
+  color: #4b598e;
+  font-weight: bold;
+}
+
+.authlink:hover {
+  color: white;
+}
+
+
+
+/*SIGNUP / SIGNIN PAGES*/
+.signin-container,
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  color: #1c2e5b;
+  padding: 0 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40em;
+  height: 50%;
+  background-color: #f6e7e7;
+  padding: 30px 30px 20px 40px;
+  border-radius: 20px;
+  color: #4b598e;
+  font-weight: bold;
+}
+
+input {
+  border: 1px solid rgb(182, 182, 182);
+  width: 20em;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 8px;
+  background-color: #ce4866;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  width: 80px;
+  margin: 15px 0;
+  font-size: 1.1em;
 }

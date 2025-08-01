@@ -8,10 +8,13 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1>Create a new account!</h1>
+  <div class="signup-container">
+  <h1>New Staff Account</h1>
   <form action="/auth/sign-up" method="POST">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" required />
+    <br>
+    <br>
 
     <!-- <label for="userType">User Type:</label>
     <select id="userType" name="userType" required>
@@ -21,6 +24,8 @@
       
     <label for="password">Password:</label>
     <input type="password" name="password" id="password" required />
+    <br>
+    <br>
     <label for="confirmPassword">Confirm Password:</label>
     <input 
       type="password"
@@ -29,6 +34,7 @@
       required 
     />
     <button type="submit">Sign up</button>
+    </div>
   </form>
 </body>
 </html>

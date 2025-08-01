@@ -1,9 +1,17 @@
+<link rel="stylesheet" href="/stylesheets/partials.css" />
+
 <nav>
   <% if(user) { %>
-    <a href="/users/<%= user._id %>/menu">Menu</a>
-    <a href="/auth/sign-out">Sign Out</a>
+  <div class="navbar">
+    <div class="nav-links">
+    <a class="authlinks" href="/users/<%= user._id %>/menu">Menu Index</a>
+    <a class="authlinks" href="/auth/sign-out">Sign Out</a>
+    </div>
+  </div>
   <% } else { %>
+    <div class="navbar">
     <a href="/auth/sign-up">New Staff</a>
     <a href="/auth/sign-in">Sign In</a>
+    </div>
   <% } %>
 </nav>

@@ -12,6 +12,7 @@ const passUserToView = require('./middleware/pass-user-to-view.js');
 
 
 const menuController = require('./controllers/menu.js');
+const ordersController = require('./controllers/orders.js');
 
 const port = process.env.PORT ? process.env.PORT : '3000';
 
@@ -40,6 +41,7 @@ app.use(session ({
 );
 
 app.use(passUserToView);
+app.use('/orders', ordersController)
 
 app.get('/', async (req, res) => {
   if (req.session.user) {
@@ -52,6 +54,7 @@ app.get('/', async (req, res) => {
 app.use('/auth', authController);
 app.use(isSignedIn);
 app.use('/users/:userId/menu', menuController)
+
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
