@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
   <title>Home Page</title>
 </head>
-<body>
-  <% if (user) { %>
-    <h1>Welcome, <%= user.username %>!</h1>
-    <p>
-      <a href="/auth/sign-out">Sign out</a>
-    </p>
-  <% } else { %>
-    <h1>CHEESEBOARD CATERING</h1>
-    <h2>Staff Login</h2>
-    <p>
-      <a href="/auth/sign-up">New Staff</a> or
-      <a href="/auth/sign-in">Sign in</a>.
-    </p>
-  <% } %>
+
+<body class="index-body">
+  <%- include('./partials/_navbar.ejs') %>
+
+  <div class="index-container">
+    <div class="text-container">
+      <h1 class="main-header">Cheesestack Co-op</h1>
+      <p class="subheader">Cheeseboard Catering</p>
+    </div>
+    <div class="auth-links">
+      <a class="signin-link" href="/auth/sign-in">Sign In</a>
+      <br>
+      <a class="signup-link" href="/auth/sign-up">New Staff</a>
+    </div>
+  </div>
+
 </body>
 </html>
