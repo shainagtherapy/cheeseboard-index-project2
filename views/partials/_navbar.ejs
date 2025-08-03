@@ -4,14 +4,21 @@
   <% if(user) { %>
   <div class="navbar">
     <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="">Catering Menu</a>
+    <a href="">Orders</a>
+    <a href="">Order History</a>
     <a class="authlinks" href="/users/<%= user._id %>/menu">Menu Index</a>
     <a class="authlinks" href="/auth/sign-out">Sign Out</a>
     </div>
   </div>
   <% } else { %>
     <div class="navbar">
+    <a href="/">Home</a>
+    <a href="">Catering Menu</a>
+    <a href="">Place an Order</a>
     <a href="/auth/sign-up">New Staff</a>
-    <a href="/auth/sign-in">Sign In</a>
+    <a href="/auth/sign-in">Staff Login</a>
     </div>
   <% } %>
 </nav>

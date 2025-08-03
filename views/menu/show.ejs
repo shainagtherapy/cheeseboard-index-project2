@@ -3,15 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/stylesheets/show.css" />
+        <link rel="stylesheet" href="/stylesheets/style.css" />
         <title>Document</title>
     </head>
     <body>
         <%- include('../partials/_navbar.ejs') %>
-        <div class="show-body">
-            <div class="show-header">
+        <div class="header">
             <h1><%= boardDetails.name %></h1></div>
-
+        
+        <div class="index-container">
+            <div class="text-container">
+            <form>
             <p>Cheeses: <%= boardDetails.cheeses %></p>
             <p>Meats: <%= boardDetails.meats %></p>
             <p>Veggies: <%= boardDetails.veggie %></p>
@@ -33,7 +35,7 @@
             <% } %>
 
             <a href="/users/<%= user._id %>/menu/<%= boardDetails._id %>/edit">Edit Board</a>
-        
+            </form>
             </div>
         </div>
     </body>

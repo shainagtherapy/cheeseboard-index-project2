@@ -71,7 +71,6 @@ router.put('/:menuId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
         const boardDetails = currentUser.menuIndex.id(req.params.menuId)
-
         boardDetails.set(req.body);
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/menu/${req.params.menuId}`)
@@ -87,7 +86,7 @@ router.put('/:menuId', async (req, res) => {
 router.delete('/:menuId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id)
-        currentUser.menuIndex.id(req.params.applicationId).deleteOne();
+        currentUser.menuIndex.id(req.params.menuId).deleteOne();
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/menu`)
     } catch (error) {

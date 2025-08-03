@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Editing <%= boardDetails.title %></title>
+    <title>Editing <%= boardDetails.name %></title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
     
-    <h1>Edit <%= boardDetails.title %></h1>
+    <h1>Edit <%= boardDetails.name %></h1>
     <p>This is our EDIT/ DELETE</p>
 
-    <div class="index-body">
+    <div class="body">
     <div class="index-container">
     <div class="text-container">
     
@@ -34,32 +34,32 @@
         <div class="dropMenus">
         <label for="jam">Jam:</label>
         <select id="jam" name="jam">
-            <option value="Fig" <%= boardDetails.jam === "Fig" ? "selected" : "" %> >Fig</option>
-            <option value="Apricot" <%= boardDetails.jam === "Apricot" ? "selected" : "" %> >Apricot</option>
-            <option value="Cherry" <%= boardDetails.jam === "Cherry" ? "selected" : "" %> >Cherry</option>
+            <option value="fig" <%= boardDetails.jam === "fig" ? "selected" : "" %> >Fig</option>
+            <option value="apricot" <%= boardDetails.jam === "apricot" ? "selected" : "" %> >Apricot</option>
+            <option value="cherry" <%= boardDetails.jam === "cherry" ? "selected" : "" %> >Cherry</option>
         </select>
         <br>
         <label for="chocolate">Chocolate:</label>
         <select id="chocolate" name="chocolate">
-            <option value="Dark chocolate" <%= boardDetails.chocolate === "Dark chocolate" ? "selected" : "" %> >Dark chocolate</option>
-            <option value="Milk chocolate" <%= boardDetails.chocolate === "Milk chocolate" ? "selected" : "" %> >Milk chocolate</option>
-            <option value="Vegan semi-sweet" <%= boardDetails.chocolate === "Vegan semi-sweet" ? "selected" : "" %> >Vegan semi-sweet</option>
+            <option value="dark chocolate" <%= boardDetails.chocolate === "dark chocolate" ? "selected" : "" %> >Dark chocolate</option>
+            <option value="milk chocolate" <%= boardDetails.chocolate === "milk chocolate" ? "selected" : "" %> >Milk chocolate</option>
+            <option value="vegan semi-sweet" <%= boardDetails.chocolate === "vegan semi-sweet" ? "selected" : "" %> >Vegan semi-sweet</option>
         </select>
         <br>
         <label for="nuts">Nuts:</label>
         <select id="nuts" name="nuts">
-            <option value="Pistachios" <% boardDetails.nuts === "Pistachios" ? "selected" : ""%> >Pistachios</option>
-            <option value="Marcona almonds" <%= boardDetails.nuts === "Marcona almonds" ? "selected" : "" %> >Marcona almonds</option>
-            <option value="Candied pecans" <%= boardDetails.nuts === "Candied pecans" ? "selected" : "" %> >Candied pecans</option>
+            <option value="pistachios" <% boardDetails.nuts === "pistachios" ? "selected" : ""%> >Pistachios</option>
+            <option value="marcona almonds" <%= boardDetails.nuts === "marcona almonds" ? "selected" : "" %> >Marcona almonds</option>
+            <option value="candied pecans" <%= boardDetails.nuts === "candied pecans" ? "selected" : "" %> >Candied pecans</option>
         </select>
         <br>
         <label for="carbs">Carb base:</label>
         <select id="carbs" name="carbs">
-            <option value="Baguette" <%= boardDetails.carbs === "Baguette" ? "selected" : "" %> >Baguette</option>
-            <option value="Pretzel crackers" <%= boardDetails.carbs === "Pretzel crackers" ? "selected" : "" %> >Pretzel crackers</option>
-            <option value="Rosemary crackers" <%= boardDetails.carbs === "Rosemary crackers" ? "selected" : "" %> >Rosemary crackers</option>
-            <option value="Sourdough crackers" <%= boardDetails.carbs === "Sourdough crackers" ? "selected" : "" %> >Sourdough crackers</option>
-            <option value="Gluten-free crackers" <%= boardDetails.carbs === "Gluten-free crackers" ? "selected" : "" %>>Gluten-free crackers</option>
+            <option value="baguette" <%= boardDetails.carbs === "baguette" ? "selected" : "" %> >Baguette</option>
+            <option value="pretzel crackers" <%= boardDetails.carbs === "pretzel crackers" ? "selected" : "" %> >Pretzel crackers</option>
+            <option value="rosemary crackers" <%= boardDetails.carbs === "rosemary crackers" ? "selected" : "" %> >Rosemary crackers</option>
+            <option value="sourdough crackers" <%= boardDetails.carbs === "sourdough crackers" ? "selected" : "" %> >Sourdough crackers</option>
+            <option value="gluten-free crackers" <%= boardDetails.carbs === "gluten-free crackers" ? "selected" : "" %>>Gluten-free crackers</option>
         </select>
         </div>
         <br>
@@ -74,9 +74,11 @@
         <textarea name="notes" id="notes"> <%= boardDetails.notes %></textarea>
         </div>
         </div>
+        <button class="button" type="submit">Update Board</button>
         </form>
-        <button type="submit">Update Board</button>
-        <form action ="/users/<%= user._id %>/menu/<% boardDetails._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete this board</button>
-</body>
+        
+        <button action ="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=DELETE" method="POST" 
+            class="button" type="submit">Delete this board</button>
+
+        </body>
 </html>

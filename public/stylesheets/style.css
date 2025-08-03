@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Berkshire+Swash&family=Comforter+Brush&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Michroma&family=Orbitron:wght@700&family=Rye&family=Sedgwick+Ave&family=Smooch+Sans:wght@700&family=Special+Elite&family=Xanh+Mono:ital@0;1&display=swap');
 body {
     font-family: 'Merriweather', 'Special Elite', 'Xahn Mono';
-    display: flex;
-    flex-direction: column;
+   
     height: 100vh;
-    width: 40vw;
     background-color: white;
-    background-image: url('https://plus.unsplash.com/premium_photo-1687959301516-3f1c5ab4e726?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: url('https://images.unsplash.com/photo-1576021166899-06cb83611726?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 60vw;
+    background-size: 60em;
 }
 
 
@@ -31,7 +29,7 @@ body {
 }
 
 .subheader {
-    font-family: 'Rye';
+  font-family: 'Rye';
   margin: 0 20px 0 20px;
   font-size: 1.4em;
 }
@@ -121,8 +119,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  width: 40%;
+  height: 40em;
 }
 
 h1 {
