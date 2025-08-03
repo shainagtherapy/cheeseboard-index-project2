@@ -12,46 +12,47 @@
     <h1>Edit <%= boardDetails.title %></h1>
     <p>This is our EDIT/ DELETE</p>
 
+    <div class="index-body">
+    <div class="index-container">
+    <div class="text-container">
+    
     <form action="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=PUT" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" value="<%= boardDetails.name%>"/>
-
-        <label for="cheeses">Cheeses:</label>
-        <input type="text" name="cheeses" id="cheeses" value="<%= boardDetails.cheeses %>"/>
-
-        <label for="meats">Meats:</label>
-        <input type="text" name="meats" id="meats" value="<%= boardDetails.meats%>"/>
-
-        <label for="veggie">Veggie:</label>
-        <input type="text" name="veggie" id="veggie" value="<%= boardDetails.veggie%>"/>
-
-        <label for="fruit">Fruit:</label>
-        <input type="text" name="fruit" id="fruit" value="<%= boardDetails.fruit%>"/>
-
+        <br>
+        <label for="cheeses">Cheeses:</label> <input type="text" name="cheeses" id="cheeses" value="<%= boardDetails.cheeses %>"/>
+        <br>
+        <label for="meats">Meats:</label> <input type="text" name="meats" id="meats" value="<%= boardDetails.meats%>"/>
+        <br>
+        <label for="veggie">Veggie:</label> <input type="text" name="veggie" id="veggie" value="<%= boardDetails.veggie%>"/>
+        <br>
+        <label for="fruit">Fruit:</label> <input type="text" name="fruit" id="fruit" value="<%= boardDetails.fruit%>"/>
+        <br>
         <label for="accout">Accoutrements:</label>
         <input type="text" name="accout" id="accout" value="<%= boardDetails.accout%>"/>
-
+        <br>
+        <div class="dropMenus">
         <label for="jam">Jam:</label>
         <select id="jam" name="jam">
             <option value="Fig" <%= boardDetails.jam === "Fig" ? "selected" : "" %> >Fig</option>
             <option value="Apricot" <%= boardDetails.jam === "Apricot" ? "selected" : "" %> >Apricot</option>
             <option value="Cherry" <%= boardDetails.jam === "Cherry" ? "selected" : "" %> >Cherry</option>
         </select>
-
+        <br>
         <label for="chocolate">Chocolate:</label>
         <select id="chocolate" name="chocolate">
             <option value="Dark chocolate" <%= boardDetails.chocolate === "Dark chocolate" ? "selected" : "" %> >Dark chocolate</option>
             <option value="Milk chocolate" <%= boardDetails.chocolate === "Milk chocolate" ? "selected" : "" %> >Milk chocolate</option>
             <option value="Vegan semi-sweet" <%= boardDetails.chocolate === "Vegan semi-sweet" ? "selected" : "" %> >Vegan semi-sweet</option>
         </select>
-
+        <br>
         <label for="nuts">Nuts:</label>
         <select id="nuts" name="nuts">
             <option value="Pistachios" <% boardDetails.nuts === "Pistachios" ? "selected" : ""%> >Pistachios</option>
             <option value="Marcona almonds" <%= boardDetails.nuts === "Marcona almonds" ? "selected" : "" %> >Marcona almonds</option>
             <option value="Candied pecans" <%= boardDetails.nuts === "Candied pecans" ? "selected" : "" %> >Candied pecans</option>
         </select>
-
+        <br>
         <label for="carbs">Carb base:</label>
         <select id="carbs" name="carbs">
             <option value="Baguette" <%= boardDetails.carbs === "Baguette" ? "selected" : "" %> >Baguette</option>
@@ -60,21 +61,22 @@
             <option value="Sourdough crackers" <%= boardDetails.carbs === "Sourdough crackers" ? "selected" : "" %> >Sourdough crackers</option>
             <option value="Gluten-free crackers" <%= boardDetails.carbs === "Gluten-free crackers" ? "selected" : "" %>>Gluten-free crackers</option>
         </select>
-
+        </div>
+        <br>
+       
         <label for="floralGarnishes">Floral Garnishes:</label>
         <input type="text" name="floralGarnishes" id="floralGarnishes" value="<%= boardDetails.floralGarnishes %>"/>
-
+        <br>
         <label for="winePairings">Recommended Wine Pairing:</label>
         <input type="text" name="winePairings" id="winePairings" value="<%= boardDetails.winePairings %>"/>
-
+        <br>
         <label for="notes">Notes:</label>
         <textarea name="notes" id="notes"> <%= boardDetails.notes %></textarea>
-
+        </div>
+        </div>
+        </form>
         <button type="submit">Update Board</button>
         <form action ="/users/<%= user._id %>/menu/<% boardDetails._id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete this board</button>
-        </form>
-
-    </form>
+        <button type="submit">Delete this board</button>
 </body>
 </html>

@@ -28,22 +28,22 @@ const menuSchema = new mongoose.Schema({
   jam: {
     type: String,
     required: true,
-    enum: ['fig', 'apricot', 'cherry'],
+    enum: ['Fig', 'Apricot', 'Cherry'],
   },
   chocolate: {
     type: String,
     required: true,
-    enum: ['dark chocolate', 'milk chocolate', 'vegan semi-sweet']
+    enum: ['Dark chocolate', 'Milk chocolate', 'Vegan semi-sweet']
   },
   nuts: {
     type: String,
     required: true,
-    enum: ['pistachios', 'marcona almonds', 'candied pecans']
+    enum: ['Pistachios', 'Marcona almonds', 'Candied pecans']
   },
   carbs: {
     type: String,
     required: true,
-    enum: ['baguette', 'pretzel crackers', 'rosemary crackers', 'sourdough crackers', 'gluten-free crackers'],
+    enum: ['Baguette', 'Pretzel crackers', 'Rosemary crackers', 'Sourdough crackers', 'Gluten-free crackers'],
   },
   floralGarnishes: {
     type: String,

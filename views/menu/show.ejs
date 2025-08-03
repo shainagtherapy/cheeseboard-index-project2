@@ -3,34 +3,38 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/stylesheets/style.css" />
+        <link rel="stylesheet" href="/stylesheets/show.css" />
         <title>Document</title>
     </head>
     <body>
         <%- include('../partials/_navbar.ejs') %>
-        <h1><%= boardDetails.name %></h1>
+        <div class="show-body">
+            <div class="show-header">
+            <h1><%= boardDetails.name %></h1></div>
 
-        <p>Cheeses: <%= boardDetails.cheeses %></p>
-        <p>Meats: <%= boardDetails.meats %></p>
-        <p>Veggies: <%= boardDetails.veggie %></p>
-        <p>Fruit: <%= boardDetails.fruit %></p>
-        <p>Accoutrements: <%= boardDetails.accout %></p>
-        <p>Jam: <%= boardDetails.jam %></p>
-        <p>Chocolate: <%= boardDetails.chocolate %></p>
-        <p>Nuts: <%= boardDetails.nuts %></p>
-        <p>Carb Base: <%= boardDetails.carbs %></p>
+            <p>Cheeses: <%= boardDetails.cheeses %></p>
+            <p>Meats: <%= boardDetails.meats %></p>
+            <p>Veggies: <%= boardDetails.veggie %></p>
+            <p>Fruit: <%= boardDetails.fruit %></p>
+            <p>Accoutrements: <%= boardDetails.accout %></p>
+            <p>Jam: <%= boardDetails.jam %></p>
+            <p>Chocolate: <%= boardDetails.chocolate %></p>
+            <p>Nuts: <%= boardDetails.nuts %></p>
+            <p>Carb Base: <%= boardDetails.carbs %></p>
 
-        <% if (boardDetails.floralGarnishes) { %>
-        <p>Floral Garnishes: <%= boardDetails.floralGarnishes %></p>
-        <% } %>
-        <% if (boardDetails.winePairings) { %>
-        <p>Recommended Wine Pairings: <%= boardDetails.winePairings %></p>
-        <% } %>
-        <% if (boardDetails.notes) { %>
-        <p>Notes: <%= boardDetails.notes %></p>
-        <% } %>
+            <% if (boardDetails.floralGarnishes) { %>
+            <p>Floral Garnishes: <%= boardDetails.floralGarnishes %></p>
+            <% } %>
+            <% if (boardDetails.winePairings) { %>
+            <p>Recommended Wine Pairings: <%= boardDetails.winePairings %></p>
+            <% } %>
+            <% if (boardDetails.notes) { %>
+            <p>Notes: <%= boardDetails.notes %></p>
+            <% } %>
 
-        <a href="/users/<%= user._id %>/menu/<%= boardDetails._id %>/edit">Edit Board</a>
-
+            <a href="/users/<%= user._id %>/menu/<%= boardDetails._id %>/edit">Edit Board</a>
+        
+            </div>
+        </div>
     </body>
 </html>

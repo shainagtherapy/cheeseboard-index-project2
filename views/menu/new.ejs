@@ -10,67 +10,75 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Board</h1>
     <p>This is our Schema list to build a new board!</p>
+    <div class="new-body">
+        <div class="new-container">
+            <div class="new-text-container">
 
     <form action="/users/<%= user._id %>/menu" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
-
+        <br>
         <label for="cheeses">Cheeses:</label>
         <input type="text" name="cheeses" id="cheeses" />
-
+        <br>
         <label for="meats">Meats:</label>
         <input type="text" name="meats" id="meats" />
-
+        <br>
         <label for="veggie">Veggie:</label>
         <input type="text" name="veggie" id="veggie" />
-
+        <br>
         <label for="fruit">Fruit:</label>
         <input type="text" name="fruit" id="fruit" />
-
+        <br>
         <label for="accout">Accoutrements:</label>
         <input type="text" name="accout" id="accout" />
-
+        <br>
+        <div class="dropMenus">
         <label for="jam">Jam:</label>
-        <select id="jam" name="Jam">
+        <select id="jam" name="jam" id=jam">
             <option value="Fig">Fig</option>
             <option value="Apricot">Apricot</option>
             <option value="Cherry">Cherry</option>
         </select>
-
+        <br>
         <label for="chocolate">Chocolate:</label>
-        <select id="chocolate" name="chocolate">
+        <select id="chocolate" name="chocolate" id="chocolate">
             <option value="Dark chocolate">Dark chocolate</option>
             <option value="Milk chocolate">Milk chocolate</option>
             <option value="Vegan semi-sweet">Vegan semi-sweet</option>
         </select>
-
+        <br>
         <label for="nuts">Nuts:</label>
-        <select id="nuts" name="nuts">
+        <select id="nuts" name="nuts" id="nuts">
             <option value="Pistachios">Pistachios</option>
             <option value="Marcona almonds">Marcona almonds</option>
             <option value="Candied pecans">Candied pecans</option>
         </select>
-
+        <br>
         <label for="carbs">Carb base:</label>
-        <select id="carbs" name="carbs">
+        <select id="carbs" name="carbs" id="carbs">
             <option value="Baguette">Baguette</option>
             <option value="Pretzel crackers">Pretzel crackers</option>
             <option value="Rosemary crackers">Rosemary crackers</option>
             <option value="Sourdough crackers">Sourdough crackers</option>
             <option value="Gluten-free crackers">Gluten-free crackers</option>
         </select>
-
+        </div>
+        <br>
         <label for="floralGarnishes">Floral Garnishes:</label>
         <input type="text" name="floralGarnishes" id="floralGarnishes" />
-
+        <br>
         <label for="winePairings">Recommended Wine Pairing:</label>
         <input type="text" name="winePairings" id="winePairings" />
-
+        <br>
         <label for="notes">Notes:</label>
         <textarea name="notes" id="notes"></textarea>
+        </div>
 
         <button type="submit">Submit</button>
 
     </form>
+    </div>
+    </div>
 </body>
 </html>

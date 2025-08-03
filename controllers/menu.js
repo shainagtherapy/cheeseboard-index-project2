@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
         currentUser.menuIndex.push(req.body);
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/menu`);
-
+        console.log(req.body.menuIndex);
     } catch (error) {
         console.log(error);
         res.redirect('/');
