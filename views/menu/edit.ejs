@@ -77,8 +77,8 @@
         <button class="button" type="submit">Update Board</button>
         </form>
         
-        <button action ="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=DELETE" method="POST" 
-            class="button" type="submit">Delete this board</button>
+        <form action="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=DELETE" method="POST">
+        <button class="button" type="submit">Delete this board</button></form>
 
         </body>
 </html>

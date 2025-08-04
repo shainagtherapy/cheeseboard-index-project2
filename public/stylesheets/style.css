@@ -6,8 +6,8 @@ body {
     background-color: white;
     background-image: url('https://images.unsplash.com/photo-1576021166899-06cb83611726?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 60em;
+    background-position: right 60%;
+    background-size: 70vw cover;
 }
 
 
@@ -39,7 +39,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  width: 40vw;
+  width: 30vw;
 }
 
 .auth-links {
@@ -133,7 +133,7 @@ form {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  width: 40em auto;
+  width: 30em auto;
   background-color: #f6e7e7;
   padding: 30px 30px 20px 40px;
   border-radius: 20px;
