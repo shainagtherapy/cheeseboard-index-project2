@@ -3,10 +3,9 @@
 <nav>
   <% if(user) { %>
   <div class="navbar">
-    <div class="nav-links">
     <a href="/">Home</a>
     <a href="">Catering Menu</a>
-    <a href="">Orders</a>
+    <a class="authlinks" href="/orders">Orders</a>
     <a href="">Order History</a>
     <a class="authlinks" href="/users/<%= user._id %>/menu">Menu Index</a>
     <a class="authlinks" href="/auth/sign-out">Sign Out</a>

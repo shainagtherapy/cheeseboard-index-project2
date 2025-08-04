@@ -14,24 +14,24 @@
         <div class="index-container">
             <div class="text-container">
             <form>
-            <p>Cheeses: <%= boardDetails.cheeses %></p>
-            <p>Meats: <%= boardDetails.meats %></p>
-            <p>Veggies: <%= boardDetails.veggie %></p>
-            <p>Fruit: <%= boardDetails.fruit %></p>
-            <p>Accoutrements: <%= boardDetails.accout %></p>
-            <p>Jam: <%= boardDetails.jam %></p>
-            <p>Chocolate: <%= boardDetails.chocolate %></p>
-            <p>Nuts: <%= boardDetails.nuts %></p>
-            <p>Carb Base: <%= boardDetails.carbs %></p>
+            <label>Cheeses:</label> <input value="<%= boardDetails.cheeses %>" disabled />
+            <label>Meats:</label> <input value="<%= boardDetails.meats %>" disabled />
+            <label>Veggies:</label> <input value="<%= boardDetails.veggie %>" disabled />
+            <label>Fruit:</label> <input value="<%= boardDetails.fruit %>" disabled />
+            <label>Accoutrements:</label> <input value="<%= boardDetails.accout %>" disabled />
+            <label>Jam:</label> <input value="<%= boardDetails.jam %>" disabled />
+            <label>Chocolate:</label> <input value="<%= boardDetails.chocolate %>" disabled />
+            <label>Nuts:</label> <input value="<%= boardDetails.nuts %>" disabled />
+            <label>Carb Base:</label> <input value="<%= boardDetails.carbs %>" disabled />
 
             <% if (boardDetails.floralGarnishes) { %>
-            <p>Floral Garnishes: <%= boardDetails.floralGarnishes %></p>
+            <label>Floral Garnishes:</label> <input value="<%= boardDetails.floralGarnishes %>" disabled />
             <% } %>
             <% if (boardDetails.winePairings) { %>
-            <p>Recommended Wine Pairings: <%= boardDetails.winePairings %></p>
+            <label>Recommended Wine Pairings:</label> <input value="<%= boardDetails.winePairings %>" disabled />
             <% } %>
             <% if (boardDetails.notes) { %>
-            <p>Notes: <%= boardDetails.notes %></p>
+            <label>Notes:</label> <input value="<%= boardDetails.notes %>" disabled />
             <% } %>
 
             <a href="/users/<%= user._id %>/menu/<%= boardDetails._id %>/edit">Edit Board</a>

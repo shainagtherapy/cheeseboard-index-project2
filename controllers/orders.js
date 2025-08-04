@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
     }
 })
 
-router.get('/orders', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const orders = await Order.find({})
         res.render('orders/index.ejs', {orders})
