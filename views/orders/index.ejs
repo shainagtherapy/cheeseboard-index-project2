@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Order Index</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Order Page</h1>
-
-
+    <div class="index-container">
+        <div class="text-container">
+    <ul>
+        <% orders.forEach((orders) => { %>
+            <li>
+                Name: <%= orders.customerName %><br>
+                Phone: <%= orders.customerPhone %><br>
+                Email: <%= orders.customerEmail %><br>
+                Order Date: <%= orders.orderDate %><br>
+                Pickup Date: <%= orders.desiredPickupDate %><br>
+                Cheeseboard: <%= orders.cheeseboard %><br>
+                Quantity: <%= orders.quantity %><br>
+                Jam: <%= orders.jam %><br>
+                Chocolate: <%= orders.chocolate %><br>
+                Nuts: <%= orders.nuts %><br>
+                Carb Base: <%= orders.carbs %><br>
+                Status: <select id="status" name="status">
+                <option value="enquiry" <%= orders.status === "enquiry" ? "selected" : "" %> >enquiry</option>
+                <option value="confirmed" <%= orders.status === "confirmed" ? "selected" : "" %> >confirmed</option>
+                <option value="complete" <%= orders.status === "complete" ? "selected" : "" %> >complete</option><br>
+            </li>
+        <% }) %>
+    </ul>
+    </div>
+</div>
 </body>
 </html>

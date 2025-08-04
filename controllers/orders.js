@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         const orders = await Order.find({})
-        res.render('orders/index.ejs', {orders})
+        res.render('orders/index.ejs', { orders })
     } catch (error) {
         console.log(error)
     }
