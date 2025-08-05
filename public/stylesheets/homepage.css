@@ -10,35 +10,32 @@ body {
     background-attachment: fixed;
 }
 
-
-.index-body {
-  color: hwb(0 10% 69%);
+.index-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 40vw;
+  box-sizing: border-box;
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
-  align-items: start;
-  margin: 0;
-  padding: 10px 10px;
+  margin: 10px 10px;
   gap: 10px;
 }
 
-.main-header {
+h1 {
   font-family: 'Rye';
   font-weight: normal;
   color: rgb(139, 59, 59);
   font-size: 5em;
 }
 
-.subheader {
+h2 {
   font-family: 'Rye';
-  margin: 0 20px 0 20px;
-  font-size: 1.4em;
+  font-weight: normal;
+  font-size: 2em;
 }
 
 .auth-links {

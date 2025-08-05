@@ -5,14 +5,16 @@ const Order = require('../models/order.js')
 
 //======================= CREATE ==============================================
 
-router.post('/orders', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
         const newOrder = await Order.create(req.body);
-        res.redirect('/confirmation')
+        res.redirect('orders/confirmation')
     } catch (error) {
         console.log(error)
     }
 })
+
+
 //======================= READ ==============================================
 router.get('/', async (req, res) => {
     try {
@@ -31,7 +33,7 @@ router.get('/new', async (req, res) => {
         res.render('orders/new.ejs')
 });
 
-router.get('/confirmation', (req,res) => {
+router.get('/confirmation', async (req,res) => {
     res.render('orders/confirmation.ejs')
 });
 

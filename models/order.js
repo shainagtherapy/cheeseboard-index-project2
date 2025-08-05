@@ -7,7 +7,6 @@ const orderSchema = new mongoose.Schema({
   orderDate: { type: Date },
   desiredPickupDate: { type: Date },
   cheeseboard: { type: String, required: true }, // or you could reference a Menu model
-  quantity: { type: Number, required: true },
   jam: {
     type: String,
     enum: ['fig', 'apricot', 'cherry'],

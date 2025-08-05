@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Berkshire+Swash&family=Comforter+Brush&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Michroma&family=Orbitron:wght@700&family=Rye&family=Sedgwick+Ave&family=Smooch+Sans:wght@700&family=Special+Elite&family=Xanh+Mono:ital@0;1&display=swap');
 body {
     font-family: 'Merriweather', 'Special Elite', 'Xahn Mono';
-    height: 100vh;
     background-color: white;
     background-image: url('https://images.unsplash.com/photo-1576021166899-06cb83611726?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-repeat: no-repeat;
@@ -9,11 +8,6 @@ body {
     background-size: 50vw;
     background-attachment: fixed;
 }
-
-
-
-
-/* HOMEPAGE */
 
 
 /* Global body styling */
@@ -95,4 +89,20 @@ button:hover {
   
   width: 40vw;
   height: 40em;
+}
+
+/* order index status */
+select option[value="enquiry"] {
+  background-color: #95eda9; /* light green */
+  color: black;
+}
+
+select option[value="confirmed"] {
+  background-color: #f2dc92; /* light yellow */
+  color: black;
+}
+
+select option[value="complete"] {
+  background-color: #ed99a0; /* light red */
+  color: black;
 }
