@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Order Enquiry Form</h1>
+        <form action="/orders" method="POST">
+        <label for="customerName">Name:</label>
+        <input type="customerName" name="customerName" id="customerName" />
+        <br>
+        <label for="customerPhone">Phone#:</label>
+        <input type="customerPhone" name="customerPhone" id="customerPhone" />
+        <br>
+        <label for="customerEmail">Email:</label>
+        <input type="customerEmail" name="customerEmail" id="customerEmail" />
+        <br>
+        <label for="orderDate">Today's Date:</label>
+        <input type="date" name="date" id="date" />
+        <br>
+        <label for="desiredPickupDate">Pickup Date:</label>
+        <input type="date" name="desiredPickupDate" id="desiredPickupDate" />
+        <br>
+        <label for="cheeseboard">Cheeseboard:</label>
+        <select id="cheeseboard" name="cheeseboard" id="cheeseboard">
+            <option value="Springboard">Springboard</option>
+            <option value="Midsummer">Midsummer</option>
+            <option value="Winter Solstice">Winter Solstice</option>
+            <option value="What's Gouda">What's Gouda</option>
+            <option value="Cheddar Forever">Cheddar Forever</option>
+            <option value="Black & Blues">Black & Blues</option>
+            <option value="Espana">Espana</option>
+            <option value="French Fromage">French Fromage</option>
+            <option value="Stateside">Stateside</option>
+        </select>
+        <label for="quantitiy">Quantity:</label>
+        <input type="quantity" name="quantity" id="quantity" />
+        <br>
+        Modifiers:
+        <br>
+        <label for="jam">Jam:</label>
+        <select id="jam" name="jam" id=jam">
+            <option value="fig">Fig</option>
+            <option value="apricot">Apricot</option>
+            <option value="cherry">Cherry</option>
+        </select>
+        <br>
+        <label for="chocolate">Chocolate:</label>
+        <select id="chocolate" name="chocolate" id="chocolate">
+            <option value="dark chocolate">Dark chocolate</option>
+            <option value="milk chocolate">Milk chocolate</option>
+            <option value="vegan semi-sweet">Vegan semi-sweet</option>
+        </select>
+        <br>
+        <label for="nuts">Nuts:</label>
+        <select id="nuts" name="nuts" id="nuts">
+            <option value="pistachios">Pistachios</option>
+            <option value="marcona almonds">Marcona almonds</option>
+            <option value="candied pecans">Candied pecans</option>
+        </select>
+        <br>
+        <label for="carbs">Carb base:</label>
+        <select id="carbs" name="carbs" id="carbs">
+            <option value="baguette">Baguette</option>
+            <option value="pretzel crackers">Pretzel crackers</option>
+            <option value="rosemary crackers">Rosemary crackers</option>
+            <option value="sourdough crackers">Sourdough crackers</option>
+            <option value="gluten-free crackers">Gluten-free crackers</option>
+        </select>
+        <br>
+        
+        <br>
+        Recommended <a href="https://vinovault-889b1e43da2d.herokuapp.com/shaina">Wine Pairing:</a>
+        <label for="winePairings">Notes/ Add ons:</label>
+        <textarea name="notes" id="notes"></textarea>
+        </div>
+        <input type="hidden" name="status" value="enquiry">
+
+        <button type="submit">Submit</button>
+
+    </form>
+    
+</body>
+</html>

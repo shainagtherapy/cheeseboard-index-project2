@@ -3,6 +3,8 @@ const router = express.Router();
 
 const Order = require('../models/order.js')
 
+//======================= CREATE ==============================================
+// POSTMAN ROUTE:
 router.post('/', async (req, res) => {
     try{
         const newOrder = await Order.create(req.body);
@@ -11,7 +13,7 @@ router.post('/', async (req, res) => {
         console.log(error)
     }
 })
-
+//======================= READ ==============================================
 router.get('/', async (req, res) => {
     try {
         const orders = await Order.find({})
@@ -20,6 +22,14 @@ router.get('/', async (req, res) => {
         console.log(error)
     }
 })
+
+router.get('/ordermenu', async (req,res) => {
+    res.render('orders/ordermenu.ejs')
+});
+
+router.get('/new', async (req, res) => {
+        res.render('orders/new.ejs')
+    });
 
 module.exports = router;
 

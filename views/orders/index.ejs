@@ -28,8 +28,10 @@
                 Status: <select id="status" name="status">
                 <option value="enquiry" <%= orders.status === "enquiry" ? "selected" : "" %> >enquiry</option>
                 <option value="confirmed" <%= orders.status === "confirmed" ? "selected" : "" %> >confirmed</option>
-                <option value="complete" <%= orders.status === "complete" ? "selected" : "" %> >complete</option><br>
+                <option value="complete" <%= orders.status === "complete" ? "selected" : "" %> >complete</option>
+                </select>
             </li>
+            <br> 
         <% }) %>
     </ul>
     </div>
