@@ -37,6 +37,7 @@ HTML, CSS, Javascript, MongoDB
 
 ```
 Stretch Goals
-* Allow different authorizations based on staff user type- 'managers' have all access, and 'mongers' only have viewing access and cannot edit or delete cheeseboards
+* Allow different authorizations based on staff user type- 'managers' have all access, and 'mongers' to have all viewing access to see the cheeseboard and their details, but cannot edit or delete cheeseboards
 * If order status === 'complete', move the order into the Order History page.
 * Color code the order status options: "enquiry" = green, "confirmed" = yellow, and "complete" = red
+* Add alert messages to confirm you want to delete a board!

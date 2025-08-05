@@ -53,12 +53,19 @@ input, text area, select {
 
 button {
   padding: 8px;
-  background-color: #ce4866;
-  color: white;
+  background-color: #a4d2ec;
+  color: black;
   border-radius: 30px;
   border: none;
   width: fit-content;
   font-size: 1em;
+}
+
+.delete-form {
+  background: none;
+  border: none;
+  padding: 5px;
+  margin: 0;
 }
 
 button:hover {
