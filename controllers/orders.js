@@ -9,6 +9,7 @@ router.post('/', async (req, res) => {
     try{
         const newOrder = await Order.create(req.body);
         res.json(newOrder);
+        res.redirect('/confirmation')
     } catch (error) {
         console.log(error)
     }

@@ -54,7 +54,10 @@ const menuSchema = new mongoose.Schema({
   },
   notes: {
     type: String,
-  }
+  },
+  image: {
+    type: String,
+  },
 })
 
 const userSchema = new mongoose.Schema({

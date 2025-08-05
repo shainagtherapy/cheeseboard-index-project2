@@ -15,7 +15,7 @@ const orderSchema = new mongoose.Schema({
   },
   chocolate: {
     type: String,
-    enum: ['dark', 'milk', 'vegan'],
+    enum: ['dark chocolate', 'milk chocolate', 'vegan semi-sweet'],
     default: 'None'
   },
   nuts: {
