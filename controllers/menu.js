@@ -96,27 +96,3 @@ router.delete('/:menuId', async (req, res) => {
 
 module.exports = router;
 
-// router.get('/orders', (req, res) => {
-//     // add object here?
-// })
-
-// router.post('/orders', async (req, res) => {
-//     const order= new monmodel({
-
-//         name: req.body.name,
-//         email: req.body.email,
-//         phoneNumber: req.body.phoneNumber,
-//         cheeseboard: req.body.cheeseboard,
-//         jam: req.body.jam,
-//         nuts: req.body.nuts,
-//         chocolate: req.body.chocolate,
-//         carb: req.body.carb,
-//         todaysDate: (timestamp),
-//         pickupDate: (date),
-//         notes: req.body.notes,
-//     })
-
-//     await data.save();
-//     res.json(order);
-
-// })
