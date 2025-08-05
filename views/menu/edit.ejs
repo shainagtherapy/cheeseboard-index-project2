@@ -10,11 +10,8 @@
     <%- include('../partials/_navbar.ejs') %>
     
     <h1>Edit <%= boardDetails.name %></h1>
-    <p>This is our EDIT/ DELETE</p>
-
     <div class="form-container">
-    <div class="text-container">
-    
+    <div class="text-container"> 
     <form action="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=PUT" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" value="<%= boardDetails.name%>"/>
@@ -76,8 +73,7 @@
         <button class="button" type="submit">Update Board</button>
         </form>
         
-        <form action="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=DELETE" method="POST">
-        <button class="button" type="submit">Delete this board</button></form>
-
+        <button class="button" type="submit">Delete this board</button>
+        <br>
         </body>
 </html>

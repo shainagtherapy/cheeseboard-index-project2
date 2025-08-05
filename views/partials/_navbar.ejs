@@ -4,9 +4,9 @@
   <% if(user) { %>
   <div class="navbar">
     <a href="/">Home</a>
-    <a href="">Catering Menu</a>
+    <a href="/orders/ordermenu">Catering Menu</a>
     <a class="authlinks" href="/orders">Orders</a>
-    <a href="">Order History</a>
+    <a class="authlinks" href="/orderhistory">Order History</a>
     <a class="authlinks" href="/users/<%= user._id %>/menu">Menu Index</a>
     <a class="authlinks" href="/auth/sign-out">Sign Out</a>
     </div>

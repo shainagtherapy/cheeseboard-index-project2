@@ -8,7 +8,10 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Order Enquiry Form</h1>
+    <div class="form-container">
+        <div class="text-container">
+    
+        <h1>Order Enquiry Form</h1>
         <form action="/orders" method="POST">
         <label for="customerName">Name:</label>
         <input type="customerName" name="customerName" id="customerName" />
@@ -29,6 +32,7 @@
         <select id="cheeseboard" name="cheeseboard" id="cheeseboard">
             <option value="Springboard">Springboard</option>
             <option value="Midsummer">Midsummer</option>
+            <option value="Hocus Pocus">Hocus Pocus</option>
             <option value="Winter Solstice">Winter Solstice</option>
             <option value="What's Gouda">What's Gouda</option>
             <option value="Cheddar Forever">Cheddar Forever</option>
@@ -37,10 +41,8 @@
             <option value="French Fromage">French Fromage</option>
             <option value="Stateside">Stateside</option>
         </select>
-        <label for="quantitiy">Quantity:</label>
-        <input type="quantity" name="quantity" id="quantity" />
         <br>
-        Modifiers:
+        <h3>Modifiers:</h3>
         <br>
         <label for="jam">Jam:</label>
         <select id="jam" name="jam" id=jam">
@@ -72,10 +74,14 @@
             <option value="gluten-free crackers">Gluten-free crackers</option>
         </select>
         <br>
-        
+        <p>Each board is intentionally designed with paired vegetables, fruits, honey, and accoutrements.
         <br>
-        Recommended <a href="https://vinovault-889b1e43da2d.herokuapp.com/shaina">Wine Pairing:</a>
-        <label for="winePairings">Notes/ Add ons:</label>
+        All boards have suggested <a href="https://vinovault-889b1e43da2d.herokuapp.com/shaina">wine pairings</a>! 
+        <br>
+        If you would like to add wine to your order, please add into the notes below.
+        <p>ie: Oyster Bay Sauvignon Blanc x2</p>
+        <br>
+        <label for="notes">Notes/ Add ons:</label>
         <textarea name="notes" id="notes"></textarea>
         </div>
         <input type="hidden" name="status" value="enquiry">

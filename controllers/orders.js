@@ -4,11 +4,10 @@ const router = express.Router();
 const Order = require('../models/order.js')
 
 //======================= CREATE ==============================================
-// POSTMAN ROUTE:
-router.post('/', async (req, res) => {
+
+router.post('/orders', async (req, res) => {
     try{
         const newOrder = await Order.create(req.body);
-        res.json(newOrder);
         res.redirect('/confirmation')
     } catch (error) {
         console.log(error)
@@ -30,7 +29,11 @@ router.get('/ordermenu', async (req,res) => {
 
 router.get('/new', async (req, res) => {
         res.render('orders/new.ejs')
-    });
+});
+
+router.get('/confirmation', (req,res) => {
+    res.render('orders/confirmation.ejs')
+});
 
 module.exports = router;
 

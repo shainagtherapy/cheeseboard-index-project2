@@ -9,7 +9,7 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Cheeseboard Menu</h1>
-    <a href="/users/<%=user._id%>/menu/new">Add New Board</a>
+    <h2><a href="/users/<%=user._id%>/menu/new">Add New Board</a></h2>
     <br>
     <ul>
         <% boardList.forEach(cheeseboard => { %>

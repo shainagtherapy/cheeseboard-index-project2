@@ -13,7 +13,7 @@
         
         <div class="form-container">
             <div class="text-container">
-            <form>
+            <form action="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=PUT" method="POST">
             <label>Cheeses:</label> <input value="<%= boardDetails.cheeses %>" disabled /><br>
             <label>Meats:</label> <input value="<%= boardDetails.meats %>" disabled /><br>
             <label>Veggies:</label> <input value="<%= boardDetails.veggie %>" disabled /><br>
@@ -34,12 +34,7 @@
             <label>Notes:</label> <input value="<%= boardDetails.notes %>" disabled /><br>
             <% } %>
             <br>
-            <form action="
-            <a href="/users/<%= user._id %>/menu/<%= boardDetails._id %>/edit">Edit Board</a>
-
-            <form action="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=DELETE" method="POST">
-            <button class="button" type="submit">Delete Board</button></form>
-
+            <button class="button" type="submit">Edit Board</button>
             </form>
             </div>
         </div>

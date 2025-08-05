@@ -29,7 +29,7 @@ const orderSchema = new mongoose.Schema({
     default: 'None'
   },
   notes:{
-  notes: String,
+    notes: String,
   },
   status: {
     type: String,

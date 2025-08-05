@@ -17,40 +17,44 @@ body {
 
 
 /* Global body styling */
-h1 {
+h1, h2 {
   color: #1c2e5b;
   padding: 0 30px;
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: left;
-  width: 40vw;
+  width: 50vw;
+  box-sizing: border-box;
+  padding: 2rem;
 }
 
 form {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
   height: 100%;
   width: 40em auto;
   background-color: #f6f2e7;
-  padding: 30px 30px 20px 40px;
+  padding: 2rem;
   border-radius: 20px;
   color: #4b598e;
   font-weight: bold;
+  box-sizing: border-box;
 }
 
-input {
-  
+label {
+  text-align: left;
+}
+
+input, text area, select {
+  box-sizing: border-box;
   border: 1px solid rgb(182, 182, 182);
   width: auto;
   padding: 8px;
   border-radius: 10px;
-  font-family: 'Special Elite';
+  font-family: 'Special Elite', serif;
+  font-size: 1rem;
+  resize: vertical;
+  overflow-wrap: break-word;
 }
 
 button {
@@ -59,9 +63,8 @@ button {
   color: white;
   border-radius: 30px;
   border: none;
-  width: 80px;
-  margin: 15px 0;
-  font-size: 1.1em;
+  width: fit-content;
+  font-size: 1em;
 }
 
 button:hover {
