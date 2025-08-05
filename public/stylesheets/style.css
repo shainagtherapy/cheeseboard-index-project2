@@ -26,7 +26,7 @@ form {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 40em auto;
+  width: 40em fit-content;
   background-color: #f6f2e7;
   padding: 2rem;
   border-radius: 20px;
@@ -55,6 +55,7 @@ button {
   padding: 8px;
   background-color: #a4d2ec;
   color: black;
+  font-family: "Merriweather";
   border-radius: 30px;
   border: none;
   width: fit-content;

@@ -41,3 +41,4 @@ Stretch Goals
 * If order status === 'complete', move the order into the Order History page.
 * Color code the order status options: "enquiry" = green, "confirmed" = yellow, and "complete" = red
 * Add alert messages to confirm you want to delete a board!
+* Expand the viewing of the input value boxes to display all text entered

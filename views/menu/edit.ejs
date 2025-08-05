@@ -71,13 +71,11 @@
         </div>
         </div>
         <button class="button" type="submit">Update Board</button>
-        </form>
-
+        </form> 
         <form class="delete-form"
         action="/users/<%= user._id %>/menu/<%= boardDetails._id %>?_method=DELETE"
         method="POST"><button class="button delete-button" type="submit">Delete This Board</button>
         </form>
         
-        <br>
         </body>
 </html>
