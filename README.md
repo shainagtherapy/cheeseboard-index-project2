@@ -1,6 +1,6 @@
 # Co-op CheeseStack
 Cheeseboard Catering Index
-![cheeseboardIndexBanner](/images/cheeseboardindexbanner.png)
+![cheeseboardIndexBanner](/images/cheeseboardindexlogo.png)
 
 A catering menu and order processing database (for MEN stack CRUD app project).
 
